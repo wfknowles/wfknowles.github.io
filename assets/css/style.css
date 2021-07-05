@@ -1,0 +1,193 @@
+:root {
+    --primary-color: red;
+    --secondary-color: blue;
+    --tertiary-color: green;
+}
+
+/* ---- Init ---- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 18px;
+}
+
+p {
+    line-height: 1.2;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* ---- Utilities ---- */
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* ---- Header ---- */
+
+header {
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+header nav ul li a {
+    display: block;
+    padding: 10px;
+}
+
+/* ---- Footer ---- */
+
+footer {
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+
+/* ---- Sections ---- */
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 40px;
+    justify-content: center;
+}
+
+section .section-title, section .section-content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+section .section-title {
+    width: 80%;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #333333;
+}
+
+/* Section - About */
+
+section#about .feature-image {
+    width: 80%;
+    height: auto;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+/* Section - Work */
+section#work p {
+    margin: 0;
+}
+
+section#work .card {
+    position: relative;
+    margin: 20px auto;
+}
+
+section#work .feature-image {
+    margin: 0;
+}
+
+section#work .feature-content {
+    position: absolute;
+    bottom: 30px;
+    max-width: 60%;
+    display: block;
+    background-color: rgba(255, 0, 0, 0.8);
+    padding: 10px 20px;
+}
+
+section#work .feature-content p {
+    font-weight: light;
+    font-style: italic;
+}
+
+/* Section - Contact */
+
+section#contact nav {
+    width: 100%;
+}
+
+section#contact nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+section#contact nav ul li {
+    text-align: center;
+}
+
+section#contact nav ul li a {
+    display: block;
+    padding: 10px;
+}
+
+
+/* ---- Media Queries ---- */
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+/* @media screen and (min-width: 575px) {
+
+} */
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (min-width: 768px) {
+
+}
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (min-width: 980px) {
+
+}
