@@ -17,6 +17,11 @@ body {
     font-size: 18px;
 }
 
+main {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
 p {
     line-height: 1.2;
     font-weight: 400;
@@ -26,6 +31,7 @@ p {
 
 a {
     text-decoration: none;
+    color: black;
 }
 
 ul {
@@ -70,10 +76,17 @@ header {
     align-items: center;
 }
 
+header h1 {
+    font-family: 'Brandon-Black', Helvetica, Arial, sans-serif;
+    font-size: 45px;
+}
+
 header nav {
     width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
+    font-family: 'Lato' , Helvetica, Arial, sans-serif;
+    font-weight: 200;
 }
 
 header nav ul {
@@ -87,6 +100,12 @@ header nav ul li a {
     padding: 10px;
 }
 
+header nav ul li a:hover,
+header nav ul li a:active {
+    font-weight: 600;
+    color:rgba(252, 202, 33, 1.0);
+}
+
 /* ---- Footer ---- */
 
 footer {
@@ -95,6 +114,8 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
+    font-size: 16px;
+    font-weight: 200;
 }
 
 
@@ -120,6 +141,7 @@ section .section-title {
     margin-bottom: 10px;
     border-bottom: 1px solid;
     border-color: #333333;
+    font-weight: 800;
 }
 
 /* Section - About */
@@ -173,6 +195,8 @@ section#work .feature-content p {
 
 section#contact nav {
     width: 100%;
+    font-family: 'Lato' , Helvetica, Arial, sans-serif;
+    font-weight: 200;
 }
 
 section#contact nav ul {
@@ -188,6 +212,12 @@ section#contact nav ul li {
 section#contact nav ul li a {
     display: block;
     padding: 10px;
+}
+
+section#contact nav ul li a:hover, 
+section#contact nav ul li a:active {
+    font-weight: 600;
+    color:rgba(41, 171, 216, 1.0);
 }
 
 
@@ -282,4 +312,17 @@ section#contact nav ul li a {
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 @media screen and (min-width: 980px) {
 
+    section#work .card.secondary .feature-content h3 {
+        font-size: 20px;
+    }
+
+    section#work .card.secondary .feature-content p {
+        font-size: 18px;
+    }
+}
+
+/* LOAD CUSTOM FONTS */
+@font-face {
+    font-family: Brandon-Black;
+    src: url(../fonts/bdon_blk.otf);
 }
