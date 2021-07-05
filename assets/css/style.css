@@ -1,10 +1,4 @@
-:root {
-    --primary-color: red;
-    --secondary-color: blue;
-    --tertiary-color: green;
-}
-
-/* ---- Init ---- */
+/* ---- CSS Init ---- */
 
 * {
     margin: 0;
@@ -57,13 +51,6 @@ h2 {
 
 h3 {
     font-size: 20px;
-}
-
-/* ---- Utilities ---- */
-
-.flex {
-    display: flex;
-    flex-wrap: wrap;
 }
 
 /* ---- Header ---- */
