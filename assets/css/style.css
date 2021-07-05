@@ -19,6 +19,7 @@ body {
 
 p {
     line-height: 1.2;
+    font-weight: 400;
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -40,12 +41,16 @@ img {
 
 h1 {
     font-size: 36px;
-    font-weight: bold;
+    font-weight: 800;
 }
 
 h2 {
     font-size: 28px;
-    font-weight: bold;
+    font-weight: 800;
+}
+
+h3 {
+    font-size: 20px;
 }
 
 /* ---- Utilities ---- */
@@ -113,7 +118,8 @@ section .section-title {
     width: 80%;
     padding-bottom: 10px;
     margin-bottom: 10px;
-    border-bottom: 1px solid #333333;
+    border-bottom: 1px solid;
+    border-color: #333333;
 }
 
 /* Section - About */
@@ -135,8 +141,17 @@ section#work .card {
     margin: 20px auto;
 }
 
+section#work .card:hover .feature-image {
+    opacity: 1.0;
+}
+section#work .card:hover .feature-content {
+    color: rgba(255,255,255,1.0);
+    background-color: rgba(255, 0, 0, 1.0);
+}
+
 section#work .feature-image {
     margin: 0;
+    opacity: 0.8;
 }
 
 section#work .feature-content {
@@ -144,12 +159,13 @@ section#work .feature-content {
     bottom: 30px;
     max-width: 60%;
     display: block;
+    color: rgba(255,255,255,0.8);
     background-color: rgba(255, 0, 0, 0.8);
     padding: 10px 20px;
 }
 
 section#work .feature-content p {
-    font-weight: light;
+    font-weight: 200;
     font-style: italic;
 }
 
@@ -184,6 +200,82 @@ section#contact nav ul li a {
 
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
 @media screen and (min-width: 768px) {
+    header {
+        justify-content: space-between;
+    }
+
+    header h1 {
+        padding: 10px;
+    }
+
+    header nav {
+        justify-content: flex-end;
+        max-width: 50%;
+    }
+
+    section {
+        flex-wrap: nowrap;
+        align-items: start;
+    }
+
+    section .section-title {
+        max-width: 20%;
+        height: 125px;
+        border-bottom: none !important;
+        border-right: 2px solid;
+        margin: 0;
+        margin-top: 25px;
+        margin-right: 25px;
+        padding: 0;
+        align-items: center;
+    }
+
+    section .section-content {
+        max-width: 80%;
+    }
+
+    section#about .feature-image {
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+    section#work .section-content {
+        justify-content: space-between;
+    }
+
+    section#work .card {
+        margin: 0;
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+
+    section#work .card.secondary {
+        max-width: calc(50% - 12px);
+    }
+
+    section#work .card.secondary .feature-content {
+        max-width: 80%;
+    }
+
+    section#work .card.secondary .feature-content h3 {
+        font-size: 18px;
+    }
+
+    section#work .card.secondary .feature-content p {
+        font-size: 16px;
+    }
+
+    section#contact .section-title {
+        height: 50px;
+        margin-top: 0;
+        padding-top: 0;
+        align-items: center;
+    }
+
+    section#contact nav ul {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 
 }
 
